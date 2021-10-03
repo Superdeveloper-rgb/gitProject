@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web page example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center-everything">
+        <p>Web development is really cool</p>
+        <button id="button">Like</button>
+    </div>
+
+    <div class="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+    <script>
+        document.getElementById('button').addEventListener('mousedown', function(){
+            document.getElementsByClassName('heart')[0].style.animationName = '';
+            this.innerText = 'Liked ❤️';
+            setTimeout(() => {
+                document.getElementsByClassName('heart')[0].style.animationName = 'grow';
+            }, 5); 
+        });
+    </script>
+</body>
+</html>
